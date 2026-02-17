@@ -1,0 +1,16 @@
+{
+  "name": "karma-8",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "reels": "npm run install:back && npm i && npm start",
+    "start": "concurrently \"npm:backend\" \"npm:frontend\"",
+    "install:back": "cd ./backend && npm i",
+    "backend": "node backend/main.js",
+    "frontend": "live-server frontend --port=5500 --open=./index.html"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "live-server": "^1.2.2"
+  }
+}
